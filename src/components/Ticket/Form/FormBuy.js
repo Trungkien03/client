@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { green } from "@mui/material/colors";
-import { Button, Container, TextField } from "@mui/material";
+import { Button, CardMedia, Container, TextField } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -60,8 +60,15 @@ export default function FormBuy({ ticket, setSelectedTicket }) {
               <Typography style={{ color: green[500] }} variant="h6">
                 Buy This Ticket
               </Typography>
+              <CardMedia
+                component="img"
+                height="194"
+                image={
+                  "https://st2.depositphotos.com/7358038/10206/v/450/depositphotos_102065516-stock-illustration-flat-ticket-icon.jpg"
+                }
+                alt="Ticket"
+              />
             </Box>
-            <Typography variant="h6">ID: {ticket?.ticketid}</Typography>
             <Typography variant="h6">
               Description: {ticket?.description}
             </Typography>
